@@ -24,29 +24,32 @@
       margin: 0;
       padding: 0;
     }
-    img{
-        width: 300px;
-        height: 300px;
-    }
 
     .swiper {
-      width: 300px;
-      height: 300px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin-left: -150px;
-      margin-top: -150px;
+      width: 100%;
+      height: 100%;
     }
 
     .swiper-slide {
-      background-position: center;
-      background-size: cover;
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .swiper-slide img {
       display: block;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .swiper-pagination-bullet{
+        background-color: red;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: rgb(45, 197, 25);
     }
   </style>
 </head>
@@ -55,18 +58,15 @@
   <!-- Swiper -->
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="images/im.jpg"/>
-      </div>
-      <div class="swiper-slide">
-        <img src="images/ggu.jpg"/>
-      </div>
-      <div class="swiper-slide">
-        <img src="images/ggug.jpg"/>
-      </div>
-      <div class="swiper-slide">
-        <img src="images/gguggung.jpg"/>
-      </div>
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
     </div>
     <div class="swiper-pagination"></div>
   </div>
@@ -77,14 +77,6 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
-      effect: "cube",
-      grabCursor: true,
-      cubeEffect: {
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      },
       pagination: {
         el: ".swiper-pagination",
       },
